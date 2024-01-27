@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fea8804dee.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <button onclick="scrollToTop()" id="scroll-up-btn" title="Go to top">
+        <i class="fas fa-angle-up fa-fw"></i>
+    </button>
+    <div id="header">
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="#"><span>N</span>ipuni.</a></div>
+                <!-- <img src="images/logo.png" class="logo"> -->
+                <ul id="sidemenu" class="menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skils</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+            
+        </nav>
+        <div class="container">
+            
+            <!-- <nav class="navbar">
+                <div class="max-width">
+                    <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+                    <ul class="menu">
+                        <li><a href="#home" class="menu-btn">Home</a></li>
+                        <li><a href="#about" class="menu-btn">About</a></li>
+                        <li><a href="#services" class="menu-btn">Services</a></li>
+                        <li><a href="#skills" class="menu-btn">Skills</a></li>
+                        <li><a href="#teams" class="menu-btn">Teams</a></li>
+                        <li><a href="#contact" class="menu-btn">Contact</a></li>
+                    </ul>
+                    <div class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav> -->
+            <div class="header-text">
+                <!-- <p>Hello, My name is</p>
+                <h1><span>Nipuni</span> Madanayake</h1>
+                <p>I'm a <span>Full-stack Developer</span></p> -->
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Nipuni Madanayake</div>
+                <div class="text-3">I'm a <span class="typing"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- ---------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Nipuni Madanayake, a passionate and results-driven Full-stack Developer with a keen interest in web development. 
+                        I thrive on solving complex problems and turning innovative ideas into scalable, efficient, and user-friendly software solutions.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>  
+                    <div class="tab-contents active-tab" id="skills">
+                        <!-- <img src="images/pic.png" class="skill-logo"> -->
+                        <ul>
+                            <li><span>Programming Languages</span><br><span><img src="images/java.png" class="skill-logo"><img src="images/c.png" class="skill-logo"><img src="images/python.png" class="skill-logo"><img src="images/js.png" class="skill-logo" style="height: 50px; width: 50px;"></span></li>
+                            <li><span>Web Development</span><br><span><img src="images/Angular.png" class="skill-logo" st><img src="images/reactjs.png" class="skill-logo" style="height: 38px; width: 120px;"><img src="images/html.png" class="skill-logo" style="height: 50px; width: 70px;"><img src="images/css.png" class="skill-logo" style="height: 50px; width: 50px;"><img src="images/nodejs.png" class="skill-logo" style="height: 35px; width: 130px;"><img src="images/php.png" class="skill-logo" style="height: 43px; width: 90px;"></span></li>
+                            <li><span>Databases</span><br><img src="images/mysql.png" class="skill-logo" style="height: 60px; width: 110px;"><img src="images/mssql.png" class="skill-logo" style="height: 70px; width: 80px;"></li>
+                            <li><span>Cloud Services</span><br><img src="images/aws.png" class="skill-logo"></li>
+                            <li><span>Microsoft Power Platform</span><br><img src="images/powerapps.png" class="skill-logo"><img src="images/powerautomate.png" class="skill-logo"><img src="images/mcLists.png" class="skill-logo"></li>
+                            <li><span>Message Brokers</span><br><img src="images/activemq.png" class="skill-logo" style="height: 60px; width: 80px;"></li>
+                            <li><span>RPA</span><br><img src="images/uipath.png" class="skill-logo" style="height: 50px; width: 120px;"></li>
+                            <li><span>Web Automation</span><br><img src="images/selenium.png" class="skill-logo" style="height: 50px; width: 140px;"></li>
+                            <li><span>Version Controlling</span><br><img src="images/git.png" class="skill-logo" style="height: 40px; width: 85px;"><img src="images/github.jpg" class="skill-logo" ></li>
+                            <li><span>Project Management Tools </span><br><img src="images/jira.png" class="skill-logo"><img src="images/trello.png" class="skill-logo" style="height: 40px; width: 125px;"></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Software Engineering Intern &nbsp;|  Dec 2022 - July 2023</span><br>
+                                Axiata Digital Labs</li>
+                            <li><span>Research Assistant  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  Jan 2019 - Aug 2019</span><br>
+                                SHINES Research Program, Faculty of Medical Sciences, <br>University of
+                                Sri Jayewardenepura 
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Sc (HONS.) in Information Technology <br>Jan 2020 - Present</span><br>Faculty of Information Technology, University of Moratuwa<br>CGPA: 3.62</li>
+                            <li><span>Diploma in Information Technology <br> Sep 2019 - Feb 2020</span><br>ESOFT Metro Campus</li>
+                            <li><span>G.C.E Advanced Level - Biological Science | 2018</span><br>Visakha Vidyalaya, Colombo 05<br>Z-Score: 1.7009</li>
+                            <li><span>G.C.E Ordinary Level - Biological Science | 2014</span><br>Janadhipathi Balika Vidyalaya, Nawala</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------services---------------------------- -->
+    <div id="blogs">
+        <div class="container">
+            <h1 class="sub-title">My Blogs</h1>
+            <div class="blogs-list">
+                <div>
+                    <img src="images/AngularBlog.png" alt="Angular Blog" >
+                    <h2>Creating a New Angular Project</h2><br>
+                    <p>
+                        Explore my blog post where I share the process of creating a new Angular project, guiding you from the basics to serving your initial webpage. 🚀</p>
+                    <a href="https://nipunimadanayake.medium.com/creating-a-new-angular-project-69fe82173ddf">Read More</a>
+                </div>
+                <div>
+                    <img src="images/cssBlog.png" alt="CSS Blog" >
+                    <h2>Let's Learn CSS</h2>
+                    <br>
+                    <p>Explore my blog post where I explain CSS, guiding you through the basics to add stylish elements to your webpages effortlessly. 😍🎨</p><br>
+                    <a href="https://nipunimadanayake.medium.com/lets-learn-css-50df351ec72c">Read More</a>
+                </div>
+                <div>
+                    <img src="images/css&htmlBlog.png" alt="CSS & HTML Blog" >
+                    <h2>Web Development with HTML and CSS</h2>
+                    <p>Explore the fundamentals of web development with HTML and CSS in this insightful article, covering essential elements, formatting, and creating interactive forms. 👩‍💻🌐</p>
+                    <a href="https://nipunimadanayake.medium.com/web-development-with-html-and-css-5324b6489c5e">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------portfolio-------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/cgu_mainwebsite.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/cgu_admindashboard.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/masterBid.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/storytelling3.jpg">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                            tincidunt sit amet sapien quis. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -----------------------------contact----------------------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> wmnipuninuwanthika@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 077 815 6777</p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/nipuni.nuwanthika.3367/"><i class="fab fa-facebook"></i></a>
+                        <!-- <a href=""><i class="fab fa-twitter-square"></i></a> -->
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Nipuni. </p>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        // JavaScript to handle the scroll event and add/remove the class
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+
+            // Change 100 to the pixel value where you want the background color to change
+            if (window.scrollY > 100) {
+                navbar.classList.add('transparent-bg');
+                // navbar.classList.remove('transparent-bg');
+            } else {
+                navbar.classList.remove('transparent-bg');
+                // navbar.classList.add('transparent-bg');
+            }
+        });
+    </script>
+    <script>
+        // JavaScript to handle scrolling to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    
+        // Show/hide scroll-up button based on scroll position
+        window.addEventListener('scroll', function() {
+            var scrollButton = document.getElementById('scroll-up-btn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        // typing text animation script
+    var typed = new Typed(".typing", {
+        strings: ["Full-stack Developer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+    </script>
+    
+</body>
+
+</html>
